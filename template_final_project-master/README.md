@@ -6,13 +6,13 @@
 
 ## Team Members
 
-<< List team member names >>
+<< Kyle Coichy >>
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+<< Recreate the classic arcade game Space Invaders where the user will be able to control a battleship by moving it left to right. The battleship will automatically fires lasers towards enemy alien invaders and when these enemies get hit by the lasers, they get destroyed. However, the alien invaders are able to fire back at the battleship and if the battleship gets hit, the user loses a life. When the user loses all 3 lives, the game is over. Also as the battleship destroys enermy invaders, the users will gain score points.>>
 
 ***    
 
@@ -30,11 +30,11 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. << Moveable character >>
+2. << Killable enemies >>
+3. << Score Counter >>
+4. << Number of Lives Counter >>
+5. << Laser gun to shoot projectiles >>
 
 ### Classes
 
