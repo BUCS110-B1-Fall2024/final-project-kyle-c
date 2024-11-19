@@ -12,7 +12,7 @@
 
 ## Project Description
 
-<< Recreate the classic arcade game Space Invaders where the user will be able to control a battleship by moving it left to right. The battleship will automatically fires lasers towards enemy alien invaders and when these enemies get hit by the lasers, they get destroyed. However, the alien invaders are able to fire back at the battleship and if the battleship gets hit, the user loses a life. When the user loses all 3 lives, the game is over. Also as the battleship destroys enermy invaders, the users will gain score points.>>
+<< Recreate the classic arcade game Space Invaders where the user will be able to control a battleship by moving it left to right. The battleship will automatically fire lasers towards enemy alien invaders and when these enemies get hit by the lasers, they get destroyed. However, the alien invaders are able to fire back at the battleship so the user must also try to dodge; if the battleship gets hit, the user loses a life. When the user loses all 3 lives, the game is over. Also as the battleship destroys enermy invaders, the users will gain score points.>>
 
 ***    
 
