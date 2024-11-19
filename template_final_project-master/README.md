@@ -1,8 +1,8 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
-## CS110 B1 Final Project  << Semester, Year >>
+# << Space Invaders >>
+## CS110 B1 Final Project  << Semester 1, Year 1 >>
 
 ## Team Members
 
