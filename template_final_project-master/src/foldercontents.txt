@@ -1,1 +1,80 @@
-All of your python files go in this folder
+class Battleship:
+    def __init__(self, x, y, img_file):
+        """
+        Initializes the Battleship object.
+        Args:
+        - x : int - starting x coordinate
+        - y : int - starting y coordinate
+        - img_file : str - path to img file representing the ship
+        """
+    
+    def move_right(self):
+        """
+        Moves the Battleship position right by 1 unit.
+        Args: None
+        Return: None
+        """
+    
+    def move_left(self):
+        """
+        Moves the Battleship position left by 1 unit.
+        Args: None
+        Return: None
+        """
+    
+    def shoot(self):
+        """
+        Creates a laser object originating from the ship's position.
+        Args: None
+        Return: Laser
+        """
+
+class Laser:
+    def __init__(self, x, y, speed):
+        """
+        Initializes a laser object.
+        Args:
+        - x : int - starting x coordinate
+        - y : int - starting y coordinate
+        - speed : int - speed of the laser
+        """
+    
+    def move(self):
+        """
+        Moves the laser upward by its speed value.
+        Args: None
+        Return: None
+        """
+    
+    def is_off_screen(self, screen_height):
+        """
+        Checks if the laser is out of bounds.
+        Args:
+        - screen_height : int - height of the game screen
+        Return: bool - True if off screen, False otherwise
+        """
+
+class Alien:
+    def __init__(self, x, y, img_file, speed):
+        """
+        Initializes an alien object.
+        Args:
+        - x : int - starting x coordinate
+        - y : int - starting y coordinate
+        - img_file : str - path to img file representing the alien
+        - speed : int - speed at which the alieb moves
+        """
+    
+    def move(self):
+        """
+        Moves the alien horizontally or vertically based on the game logic.
+        Args: None
+        Return: None
+        """
+    
+    def shoot(self):
+        """
+        Creates a laser object originating from the enemy's position.
+        Args: None
+        Return: Laser
+        """
