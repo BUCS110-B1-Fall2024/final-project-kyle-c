@@ -38,7 +38,23 @@
 
 ### Classes
 
-- << You should have a list of each of your classes with a description >>
+- << 1.Player Class
+
+Description: This class represents the player's spaceship. It allows the spaceship to move left and right using the arrow keys and shoot bullets upwards using the spacebar.
+
+2. Bullet Class
+
+Description: This class represents both the player's and enemy's bullets. It handles the creation of bullets and their movement upwards or downwards.
+
+3. Enemy Class
+
+Description: Represents an enemy invader. It is responsible for the enemy's movement, boundary behavior, and shooting mechanics.
+
+4. EnemyBullet Class
+
+Description: Represents bullets fired by enemies. The bullets move downward at a slower speed compared to the player's bullets.
+
+ >>
 
 ## ATP
 
