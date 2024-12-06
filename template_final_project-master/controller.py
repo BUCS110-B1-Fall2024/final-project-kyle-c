@@ -16,7 +16,6 @@ ENEMY_RESPAWN_COUNT = 3  # Maximum number of enemies on the screen at once
 ENEMY_SPEED_INCREMENT = 0.5  # Increase the speed of enemies after each level
 ENEMY_SHOOT_SPEED_DECREMENT = 50  # Increase shooting speed (decrease time between shots)
 
-
 # Colors
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
@@ -55,8 +54,24 @@ class Player(pygame.sprite.Sprite):
             self.image.fill(RED)  # Flash red when hit
         else:
             self.image.fill(GREEN)  # Normal color when not flashing
-            self.is_flash = False  # Reset the flash state after duration ends
+            if pygame.time.get_ticks() - self.hit_time >= self.flash_duration:
+                self.is_flash = False  # Reset the flash state after duration ends
         
+        # Movement logic
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT] and self.rect.left > 0:
+            self.rect.x -= self.speed
+        if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
+            self.rect.x += self.speed
+
+    def shoot(self):
+        bullet = Bullet(self.rect.centerx, self.rect.top)
+        all_sprites.add(bullet)
+        bullets.add(bullet)
+
+    def hit(self):
+        self.hit_time = pygame.time.get_ticks()  # Set the time of the hit
+        self.is_flash = True  # Activate the flash effect
         # Movement logic
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT] and self.rect.left > 0:
@@ -208,8 +223,6 @@ def level_up():
                     all_sprites.add(enemy)
                     enemies.add(enemy)
 
-
-
 # Function to display the "Game Over" screen
 def game_over_screen():
     game_over_text = game_over_font.render("GAME OVER", True, WHITE)
@@ -292,6 +305,7 @@ while running:
             if pygame.sprite.collide_rect(enemy_bullet, player):
                 enemy_bullet.kill()
                 lives -= 1
+                player.hit()  # Trigger hit effect when player is hit by enemy bullet
                 if lives == 0:
                     game_over = True
 
@@ -299,7 +313,6 @@ while running:
         if len(enemies) == 0:  # All enemies defeated
             level_up()
         
-
         # Draw the background
         screen.fill(BLACK)
 
