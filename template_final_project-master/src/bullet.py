@@ -1,3 +1,6 @@
+import pygame
+import time
+
 # Bullet class for player and enemy bullets
 class Bullet(pygame.sprite.Sprite):
     def __init__(self, x, y):
