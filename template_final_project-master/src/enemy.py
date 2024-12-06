@@ -1,3 +1,7 @@
+import pygame
+import time
+
+
 # Enemy class with sequential shooting logic
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, x, y, speed, shoot_rate):
